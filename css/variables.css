@@ -1,0 +1,12 @@
+@import './fonts.css';
+
+:root { 
+    --f300: 'Raleway-Light';
+    --f400: 'Raleway-regular';
+    --f700: 'Raleway-Bold';
+    --primary-color: #ffffff;
+    --secondary-color: #22425A;
+    --dark-gray: #292C35;
+    --light-gray: #FAFAFA;
+    --gray:  #F3F3F3;
+}
