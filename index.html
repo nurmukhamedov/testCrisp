@@ -15,13 +15,11 @@
             <nav class="nav">
                 <div class="nav__left">
                     <ul class="nav__ul">
-                        <div class="nav__remove-btn">
+                        <button class="nav__remove-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                  <path
-                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-                  />
-                </svg>
-                        </div>
+                              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+                            </svg>
+                        </button>
                         <li class="nav__ul-li">Shop</li>
                         <li class="nav__ul-li">Our process</li>
                         <li class="nav__ul-li">About</li>
@@ -37,10 +35,8 @@
                 </div>
                 <div class="nav__btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM64 256C64 238.3 78.33 224 96 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H96C78.33 288 64 273.7 64 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
-              />
-            </svg>
+                      <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM64 256C64 238.3 78.33 224 96 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H96C78.33 288 64 273.7 64 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/>
+                    </svg>
                 </div>
             </nav>
         </div>
@@ -59,27 +55,19 @@
                     <div class="service__content">
                         <img class="service__content-icon" src="image/message-icon.png" alt="message" />
                         <h4 class="service__content-title">Entrega en 24 h en tu casa</h4>
-                        <span class="service__content-description">El sofá en caja que cabe <br />
-                en tu ascensor.</span
-              >
-            </div>
-            <div class="service__content">
-              <img
-                class="service__content-icon"
-                src="image/cloud-icon.png"
-                alt="message"
-              />
-              <h4 class="service__content-title">Pruébalo 100 días</h4>
-              <span class="service__content-description"
-                >Vamos a tu casa a recogerlo.
-              </span>
+                        <span class="service__content-description">El sofá en caja que cabe <br />en tu ascensor.</span>
                     </div>
-                    <div class="service__content">
+                </div>
+            <div class="service__content">
+                  <img class="service__content-icon" src="image/cloud-icon.png" alt="message"/>
+                  <h4 class="service__content-title">Pruébalo 100 días</h4>
+                  <span class="service__content-description">Vamos a tu casa a recogerlo.</span>
+            </div>
+                <div class="service__content">
                         <img class="service__content-icon" src="image/pencil-icon.png" alt="message" />
                         <h4 class="service__content-title">Fácil de montar</h4>
-                        <span class="service__content-description">No tools needed !</span
-              >
-            </div>
+                        <span class="service__content-description">No tools needed !</span>
+                </div>
           </div>
         </div>
       </div>
@@ -87,26 +75,63 @@
     <section class="review">
       <div class="container">
         <h2 class="review__title">3 módulos. Infinitas posibilidades.</h2>
-        <img class="review__image" src="image/section.png" alt="" />
-        <div class="review__box">
-          <div class="review__box-content">
-            <span class="review__box-text">Excellent</span>
-                        <img class="review__icon" src="image/star.png" alt="star" />
-                        <img class="review__icon" src="image/star.png" alt="star" />
-                        <img class="review__icon" src="image/star.png" alt="star" />
-                        <img class="review__icon" src="image/star.png" alt="star" />
-                        <img class="review__icon" src="image/star.png" alt="star" />
-                        <span class="review__box-number"><strong>4.9</strong> out of 5</span>
+        <div class="review__image">
+        </div>
+    </section>
+    <main class="product">
+        <div class="container">
+            <h2 class="product__headline">Construye tu sofá perfecto. Modifícalo como quieras. Empieza con...</h2>
+            <div class="product__buttons">
+                <div class="product__buttons-color">
+                    <span class="product__buttons-text">Elige tu color</span>
+                        <button class="product__buttons-green product__buttons-circle" onclick="change1()"></button>
+                        <button class="product__buttons-blue product__buttons-circle" onclick="change2()"></button>
+                        <button class="product__buttons-purple product__buttons-circle" onclick="change3()"></button>
+                        <button class="product__buttons-gray product__buttons-circle" onclick="change4()"></button>
                     </div>
-                    <div class="review__box-total">
-                        <span> <strong>123</strong>reviews on</span>
-                        <img class="review__iconGreen" src="image/star-green.png" alt="star" />
-                        <strong>Trustpilot</strong>
+                    <button class="product__link-btn">Compra ahora</button>
+                </div>
+                <div class="product__grid">
+                    <div class="product__grid-item product__grid-item1">
+                        <img class="product__content-image" src="image/product1.svg" id="picture1" alt="product" />
+                        <div class="product__content-description">
+                            <span class="product__content-name">3 Seater sofa</span>
+                            <span class="product__content-price">Desde 2500€</span>
+                        </div>
                     </div>
+                    <div class="product__grid-item product__grid-item2">
+                        <img class="product__content-image" src="image/product2.svg" id="picture2" alt="product" />
+                        <div class="product__content-description">
+                            <span class="product__content-name">Single Chair</span>
+                            <span class="product__content-price">Desde 1500€</span>
+                        </div>
+                    </div>
+                    <div class="product__grid-item product__grid-item3">
+                        <img class="product__content-image" src="image/product3.svg" id="picture3" alt="product" width="432" height="202" />
+                        <div class="product__content-description">
+                            <span class="product__content-name">3 Seater sofa</span>
+                            <span class="product__content-price">Desde 2500€</span>
+                        </div>
+                    </div>
+                    <div class="product__grid-item product__grid-item4">
+                        <img class="product__content-image" src="image/product3.svg" id="picture4" alt="product" />
+                        <div class="product__content-description">
+                            <span class="product__content-name">2 Seater sofa</span>
+                            <span class="product__content-price">Desde 2500€</span>
+                        </div>
+                    </div>
+                    <div class="product__grid-item product__grid-item5">
+                        <img class="product__content-image" src="image/product1.svg" id="picture5" alt="product" />
+                        <div class="product__content-description">
+                            <span class="product__content-name">3 Seater sofa</span>
+                            <span class="product__content-price">Desde 2500€</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-    </section>
-    <script src="js/script.js"></script>
+            </main>
+            <script src="js/script.js"></script>
 </body>
 
 </html>
