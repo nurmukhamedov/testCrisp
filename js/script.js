@@ -50,7 +50,6 @@ function change3() {
     document.getElementById('picture3').src = 'image/product3-purple.svg';
     document.getElementById('picture4').src = 'image/product3-purple.svg';
     document.getElementById('picture5').src = 'image/product1-purple.svg';
-
 }
 
 function change4() {
@@ -59,5 +58,4 @@ function change4() {
     document.getElementById('picture3').src = 'image/product3-gray.svg';
     document.getElementById('picture4').src = 'image/product3-gray.svg';
     document.getElementById('picture5').src = 'image/product1-gray.svg';
-
 }

@@ -106,13 +106,16 @@ header {
 
 /*--------------------------------------- header-end ----------------------------------- */
 
-.intro {
+header::after {
+    content: '';
+    display: block;
     background-image: url(../image/intro__background.png);
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+    margin-top: 20px;
 }
 
 
@@ -187,12 +190,56 @@ header {
     background-image: url(../image/section.png);
     background-size: cover;
     height: 705px;
+    position: relative;
 }
 
 .review__title {
     font-size: 50px;
     text-align: center;
     padding-bottom: 34px;
+}
+
+.review__content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: var(--primary-color);
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #252525;
+}
+
+.review__content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review__content-image {
+    background: #44AE6F;
+    padding: 3px;
+    margin-left: 3px;
+}
+
+.review__content-type {
+    margin-right: 9px;
+}
+
+.review__content-rating {
+    margin-left: 12px;
+    margin-right: 5px;
+}
+
+.review__content-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.review__content-greenImage {
+    margin: 0 12px;
 }
 
 .product {
@@ -370,6 +417,8 @@ header {
     }
     .nav__remove-btn {
         display: block;
+        border: none;
+        background: none;
     }
     .nav__ul {
         position: absolute;
