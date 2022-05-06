@@ -3,6 +3,11 @@ const navMenu = document.querySelector(".nav__ul");
 const navMenuList = document.querySelectorAll(".nav__ul-li");
 const removeBtn = document.querySelector(".nav__remove-btn");
 const body = document.body;
+const btnBlue = document.querySelector(".product__buttons-blue");
+const btnGreen = document.querySelector(".product__buttons-green");
+const btnPurple = document.querySelector(".product__buttons-purple");
+const btnGray = document.querySelector(".product__buttons-gray");
+const blueImage = document.querySelectorAll(".product__grid-item img");
 
 const animatedList = () => {
     navMenuList.forEach((link, index) => {
@@ -27,35 +32,55 @@ removeBtn.addEventListener("click", () => {
     animatedList();
 });
 
-function change1() {
-    document.getElementById('picture1').src = 'image/product1.svg';
-    document.getElementById('picture2').src = 'image/product2.svg';
-    document.getElementById('picture3').src = 'image/product3.svg';
-    document.getElementById('picture4').src = 'image/product3.svg';
-    document.getElementById('picture5').src = 'image/product1.svg';
-}
+blueImage.forEach(element => {
+    btnGreen.addEventListener("click", () => {
+        element.classList.remove(
+            "product__content-image-blue",
+            "product__content-image-purple",
+            "product__content-image-gray"
+        );
+        element.classList.add("product__content-image");
+    });
+    btnBlue.addEventListener("click", () => {
+        element.classList.remove(
+            "product__content-image-purple",
+            "product__content-image-gray"
+        );
+        element.classList.add("product__content-image-blue");
+    });
+    btnPurple.addEventListener("click", () => {
+        element.classList.remove(
+            "product__content-image-gray",
+            "product__content-image-blue"
+        );
+        element.classList.add("product__content-image-purple");
+    });
 
-function change2() {
-    document.getElementById('picture1').src = 'image/product1-blue.svg';
-    document.getElementById('picture2').src = 'image/product2-blue.svg';
-    document.getElementById('picture3').src = 'image/product3-blue.svg';
-    document.getElementById('picture4').src = 'image/product3-blue.svg';
-    document.getElementById('picture5').src = 'image/product1-blue.svg';
+    btnGray.addEventListener("click", () => {
+        element.classList.remove(
+            "product__content-image-blue",
+            "product__content-image-purple"
+        );
+        element.classList.add("product__content-image-gray");
+    });
+});
 
-}
+const validation = () => {
+    const form = document.getElementById("form");
+    const email = document.getElementById("email").value;
+    const text = document.getElementById("text");
+    const validRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-function change3() {
-    document.getElementById('picture1').src = 'image/product1-purple.svg';
-    document.getElementById('picture2').src = 'image/product2-purple.svg';
-    document.getElementById('picture3').src = 'image/product3-purple.svg';
-    document.getElementById('picture4').src = 'image/product3-purple.svg';
-    document.getElementById('picture5').src = 'image/product1-purple.svg';
-}
-
-function change4() {
-    document.getElementById('picture1').src = 'image/product1-gray.svg';
-    document.getElementById('picture2').src = 'image/product2-gray.svg';
-    document.getElementById('picture3').src = 'image/product3-gray.svg';
-    document.getElementById('picture4').src = 'image/product3-gray.svg';
-    document.getElementById('picture5').src = 'image/product1-gray.svg';
-}
+    if (email.match(validRegex)) {
+        form.classList.add("valid");
+        form.classList.remove("invalid");
+        text.innerHTML = "Your Email Address is Valid";
+        text.style.color = "#44AE6F";
+    } else {
+        form.classList.remove("valid");
+        form.classList.add("invalid");
+        text.innerHTML = "Please Enter Valid Email Address!";
+        text.style.color = " #c92727";
+    }
+};
